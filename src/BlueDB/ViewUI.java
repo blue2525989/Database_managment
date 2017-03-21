@@ -13,7 +13,12 @@ import java.io.*;
 public class ViewUI{
     
     private JPanel paneName = new JPanel();
-    private JLabel nameL = new JLabel("View Selected Database information:");
+    private JLabel nameL = new JLabel("Execute statements and View Selected Database information:");
+    
+    private JPanel executePane = new JPanel();
+    private JTextArea execute = new JTextArea("", 8,35);
+    JButton executer = new JButton("Execute");
+    JButton refresh = new JButton("Refresh table");
     
     private JPanel paneDescription = new JPanel();
     private JScrollPane scroll = new JScrollPane(paneDescription);
@@ -28,22 +33,32 @@ public class ViewUI{
        
     public void loadViewDataUI(){        
         //Set up UI
+
         paneName.add(nameL);
         paneName.setBackground(Color.DARK_GRAY);
+        
+    	
+    	executePane.add(execute);
+    	executePane.setBackground(Color.DARK_GRAY);
+    	
+    	
         nameL.setForeground(Color.cyan);
         dataViewArea.setText("Please click next to cycle through the database.");
         dataViewArea.setLineWrap(true);
         paneDescription.add(dataViewArea); 
         paneDescription.setBackground(Color.DARK_GRAY);
         
+        buttons.add(refresh);
+    	buttons.add(executer);
         buttons.add(prev);
         buttons.add(next);
         buttons.add(mainMenu);
         buttons.setBackground(Color.DARK_GRAY);
      
-        GridLayout grd1 = new GridLayout(3,1);
+        GridLayout grd1 = new GridLayout(4,1);
         main.setLayout(grd1);
         main.add(paneName);
+        main.add(executePane);
         main.add(scroll);
         main.add(buttons);
         main.setVisible(true);
@@ -54,5 +69,14 @@ public class ViewUI{
     
     public void setDatabaseText(String s1) {
         dataViewArea.setText(s1);
+    }
+    
+    public String getExecute() {
+    	String text = execute.getText().trim();
+    	return text;
+    }
+    
+    public void clearExecute() {
+    	execute.setText("");
     }
 }

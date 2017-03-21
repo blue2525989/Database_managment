@@ -49,7 +49,6 @@ public class MainUI{
     
     private JPanel buttons = new JPanel();
     JButton viewData = new JButton("View Data");
-    JButton enterData = new JButton("Enter Data");
     JButton createDB = new JButton("Create Database");
     JButton exit = new JButton("Exit");
    
@@ -69,7 +68,6 @@ public class MainUI{
         
         buttons.add(viewData);
         buttons.add(createDB);
-        buttons.add(enterData);
         buttons.add(exit);
         buttons.setBackground(Color.DARK_GRAY);
      

@@ -22,24 +22,13 @@ public class dbUI{
     JPanel new1 = new JPanel();
     JLabel nameNewDb = new JLabel("Database/Table name:");
     JTextArea name_text = new JTextArea("name here", 2,8);
-    
-    JLabel id1 = new JLabel("Name of column 1:");
-    JLabel id2 = new JLabel("ID     \"integer\"");
-    
-    JLabel nameBox2 = new JLabel("Name of column 2:");
-    JTextArea box2 = new JTextArea("type VarChar(50)");
-    
+   
     // new2 panel
     JPanel new2 = new JPanel();
     
-    JLabel nameBox3 = new JLabel("Name of column 3:");
-    JTextArea box3 = new JTextArea("type VarChar(80)");
+    JLabel nameBox3 = new JLabel("Create a table:");
+    JTextArea box3 = new JTextArea("enter sql statement here");
     
-    JLabel nameBox4 = new JLabel("Name of column 4:");
-    JTextArea box4 = new JTextArea("type VarChar(250)");
-    
-    JLabel nameBox5 = new JLabel("Name column box 5:");
-    JTextArea box5 = new JTextArea("type integer");
     
     //delete pane
     JPanel delete_pane = new JPanel();
@@ -52,7 +41,7 @@ public class dbUI{
     
     //Void method to load UI
     public void loadDB_UI() {    
-        //add compnents to panes and panes to frame
+        //add components to panes and panes to frame
         top.add(header1);
         top.add(header2);
         header1.setForeground(Color.cyan);
@@ -64,13 +53,6 @@ public class dbUI{
         new1.add(nameNewDb);
         nameNewDb.setForeground(Color.cyan);
         new1.add(name_text);
-        new1.add(id1);
-        id1.setForeground(Color.cyan);
-        new1.add(id2);
-        id2.setForeground(Color.cyan);
-        new1.add(nameBox2);
-        nameBox2.setForeground(Color.cyan);
-        new1.add(box2);
         new1.setBackground(Color.DARK_GRAY);
         
         GridLayout grd2 = new GridLayout(4,2);
@@ -78,12 +60,6 @@ public class dbUI{
         new2.add(nameBox3);
         nameBox3.setForeground(Color.cyan);
         new2.add(box3);
-        new2.add(nameBox4);
-        nameBox4.setForeground(Color.cyan);
-        new2.add(box4);
-        new2.add(nameBox5);
-        nameBox5.setForeground(Color.cyan);
-        new2.add(box5);
         new2.add(chooseDel);
         chooseDel.setForeground(Color.cyan);
         new2.add(delText);
@@ -115,22 +91,12 @@ public class dbUI{
         String s = name_text.getText().trim();
         return s;
     }
-    public String getBox2() {
-        String s = box2.getText().trim();
-        return s;
-    }
+
     public String getBox3() {
         String s = box3.getText().trim();
         return s;
     }
-    public String getBox4() {
-        String s = box4.getText().trim();
-        return s;
-    }
-    public String getBox5() {
-        String s = box5.getText().trim();
-        return s;
-    }
+
     public String getDeleteName() {
         String s = delText.getText().trim();
         return s;
