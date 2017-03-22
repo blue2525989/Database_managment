@@ -20,7 +20,7 @@ public class dbUI{
         
     //new1 panel
     JPanel new1 = new JPanel();
-    JLabel nameNewDb = new JLabel("Database/Table name:");
+    JLabel nameNewDb = new JLabel("Database name:");
     JTextArea name_text = new JTextArea("name here", 2,8);
    
     // new2 panel
@@ -69,7 +69,6 @@ public class dbUI{
         delete_pane.add(delete);
         delete_pane.add(create);
         delete_pane.add(createDatabase);
-        //  delete_pane.add(createTable);     // need to figure out the insert statement
         delete_pane.setBackground(Color.DARK_GRAY);
 
         GridLayout grd1 = new GridLayout(4, 1);

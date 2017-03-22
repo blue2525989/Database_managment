@@ -7,8 +7,6 @@ package BlueDB;
  */
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
 
 public class ViewUI{
     
@@ -16,13 +14,13 @@ public class ViewUI{
     private JLabel nameL = new JLabel("Execute statements and View Selected Database information:");
     
     private JPanel executePane = new JPanel();
-    private JTextArea execute = new JTextArea("", 8,35);
+    private JTextArea execute = new JTextArea("Enter a SQL statement here to execute", 8,55);
     JButton executer = new JButton("Execute");
     JButton refresh = new JButton("Refresh table");
     
     private JPanel paneDescription = new JPanel();
     private JScrollPane scroll = new JScrollPane(paneDescription);
-    private JTextArea dataViewArea = new JTextArea("",20,35);
+    private JTextArea dataViewArea = new JTextArea("",20,55);
     
     private JPanel buttons = new JPanel();
     JButton mainMenu = new JButton("Main Menu");
@@ -62,7 +60,7 @@ public class ViewUI{
         main.add(scroll);
         main.add(buttons);
         main.setVisible(true);
-        main.setSize(500,600);
+        main.setSize(800,600);
         main.setLocationRelativeTo(null);
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        
     }
@@ -77,6 +75,6 @@ public class ViewUI{
     }
     
     public void clearExecute() {
-    	execute.setText("");
+    	execute.setText("Enter a SQL statement here to execute");
     }
 }
