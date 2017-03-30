@@ -26,7 +26,7 @@ public class dbUI{
     // new2 panel
     JPanel new2 = new JPanel();
     
-    JLabel nameBox3 = new JLabel("Create a table:");
+    JLabel nameBox3 = new JLabel("Create or Delete a table:");
     JTextArea box3 = new JTextArea("enter sql statement here");
     
     
@@ -35,8 +35,8 @@ public class dbUI{
     JLabel chooseDel = new JLabel("Enter DB to delete, BE CAREFUL");
     JTextArea delText = new JTextArea("name here");
     JButton mainMenu = new JButton("Main Menu");
-    JButton delete = new JButton("Delete");
-    JButton create = new JButton("Create Table");
+    JButton delete = new JButton("Delete Database");
+    JButton create = new JButton("Create/Delete Table");
     JButton createDatabase = new JButton("Create Database");
     
     //Void method to load UI
@@ -53,6 +53,7 @@ public class dbUI{
         new1.add(nameNewDb);
         nameNewDb.setForeground(Color.cyan);
         new1.add(name_text);
+        name_text.setLineWrap(true);
         new1.setBackground(Color.DARK_GRAY);
         
         GridLayout grd2 = new GridLayout(4,2);
@@ -60,14 +61,16 @@ public class dbUI{
         new2.add(nameBox3);
         nameBox3.setForeground(Color.cyan);
         new2.add(box3);
+        box3.setLineWrap(true);
         new2.add(chooseDel);
         chooseDel.setForeground(Color.cyan);
         new2.add(delText);
+        delText.setLineWrap(true);
         new2.setBackground(Color.DARK_GRAY);
         
         delete_pane.add(mainMenu);
-        delete_pane.add(delete);
         delete_pane.add(create);
+        delete_pane.add(delete);
         delete_pane.add(createDatabase);
         delete_pane.setBackground(Color.DARK_GRAY);
 
@@ -78,7 +81,7 @@ public class dbUI{
         main.add(new2);
         main.add(delete_pane);
         
-        main.setSize(500,600);
+        main.setSize(630,600);
         main.setVisible(true);
         main.setLocationRelativeTo(null);
         main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

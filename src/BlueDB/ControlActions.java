@@ -2,12 +2,13 @@ package BlueDB;
 
 /**
  * author: Jason Bierbrauer
+ *
  * program: BlueDB
  * function: Manage a MySQL server. 
  *
  *  
  *  
- * <--VERSION 1.0 UNDER CONSTRUCTION-->
+ * <--VERSION 2.0-->
  * 
  */
 
@@ -375,6 +376,14 @@ public class ControlActions implements ActionListener {
              * deletes entire database
              * so be careful
              * 
+             * WHEN YOU GET HOME FROM VACATION ADD THE OPTION 
+             * TO DELETE TABLE OR DATABASE.
+             * 
+             * POSSIBLY EITHER BY CHOOSING WITH A JOPTIONPANE
+             * WITH ONE BUTTON, OR MAKE A SEPERATE BUTTON THAT USES 
+             * SAME TEXT AREA. THIS MIGHT BE EASIER. I COULD JUST REUSE ALL
+             * THE SAME CODE AND CHANGE A FEW VARIABLE NAMES.
+             * 
              */
             
             if (event.getSource() == dbnew.delete) {
@@ -516,6 +525,7 @@ public class ControlActions implements ActionListener {
                 //Sets ResultSet at absolute first position in set
                 //so NullPointerException does not arise
                 rs.absolute(0);
+                view.setDatabaseText("You are currently at the start of the table.");
                 
             // catch SQL errors and show in  JOptionPane    
             } catch (SQLException e) {

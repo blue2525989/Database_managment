@@ -37,6 +37,7 @@ public class ViewUI{
         
     	
     	executePane.add(execute);
+    	execute.setLineWrap(true);
     	executePane.setBackground(Color.DARK_GRAY);
     	
     	
@@ -44,6 +45,7 @@ public class ViewUI{
         dataViewArea.setText("Please click next to cycle through the database.");
         dataViewArea.setLineWrap(true);
         paneDescription.add(dataViewArea); 
+        dataViewArea.setLineWrap(true);
         paneDescription.setBackground(Color.DARK_GRAY);
         
         buttons.add(refresh);
